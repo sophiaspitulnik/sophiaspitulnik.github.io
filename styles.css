@@ -275,9 +275,6 @@ main h3, main h4, main p, #introMessage {
 	padding-bottom: 32px;
 }
 
-#about h3 {
-	font-size: 36pt;
-}
 
 #about .section {
 	max-width: 600px;
@@ -493,7 +490,7 @@ li {
 	overflow: hidden;
 }
 
-.projectPageContent h3 {
+.projectPageContent h3, #about h3 {
 	font-size: 36pt;
 	margin-bottom: 0px;
 	line-height: 1.2;
@@ -590,6 +587,15 @@ hr.highLevelCategory {
 
 .link:hover {
 	color: #1787FF;
+}
+
+.linkHighlight {
+	background-color: #FFE845; 
+	color: #9196A4;
+}
+
+.linkHighlight:hover {
+	color: #26272C;
 }
 
 .projectNavigation {
