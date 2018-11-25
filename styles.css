@@ -888,7 +888,7 @@ video.userFlowVideo {
 		margin-left: 120px;
 		display: flex;
 		flex-direction: row;
-		align-items: baseline;
+		align-items: flex-start;
 	}
 
 	.section h3 {
@@ -1288,14 +1288,16 @@ video.userFlowVideo {
 	#problemImages {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: flex-start;
+		padding-right: 24px;
+    	padding-left: 24px;
+
 	}
 
 	#problemImages img {
-		width: 30%;
+		width: 40%;
 		height: auto;
 		align-self: center;
-
 	}
 
 
@@ -1759,7 +1761,9 @@ video.userFlowVideo {
 	#problemImages {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: flex-start;
+		padding-right: 24px;
+    	padding-left: 24px;
 	}
 
 	.theVotingProjectImportant p {
@@ -1803,10 +1807,9 @@ video.userFlowVideo {
 	}
 
 	#problemImages img {
-		width: 30%;
+		width: 40%;
 		height: auto;
 		align-self: center;
-
 	}
 
 	div.projectPreviews.column {
