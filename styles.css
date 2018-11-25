@@ -58,7 +58,15 @@ video.column {
 
 .hideDesktop {
 	display: block;
-	width: 100%;
+	width: calc(100% - 32px);
+	padding-top: 24px;
+	padding-bottom: 16px;
+	padding-left: 16px;
+	padding-right: 16px;
+	position: static; 
+	z-index: 110; 
+	top: 0;
+	background-color: rgba(255, 255, 255, 0.97);
 	overflow: hidden;
 }
 
@@ -175,7 +183,7 @@ a {
 }
 
 
-.landingPageNav h1, .projectPageNav h1 {
+.landingPageNav h1, .projectPageNav h1, .hideDesktop h1 {
 	font-size: 12pt;
 	letter-spacing: 4px;
 	text-transform: uppercase;
@@ -186,7 +194,7 @@ a {
 
 }
 
-.landingPageNav h3, .projectPageNav h3 {
+.landingPageNav h3, .projectPageNav h3, .hideDesktop h3 {
 	font-size: 12pt;
 	font-weight: bold;
 	color: #9196A4;
@@ -246,7 +254,7 @@ main h3, main h4, main p, #introMessage {
 #introMessage {
 	padding-top: 80px;
 	padding-bottom: 40px;
-	width: 100%;
+	width: calc(100% - 32px);
     padding-right: 16px;
 }
 
