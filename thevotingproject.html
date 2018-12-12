@@ -18,11 +18,23 @@
 
 
 		<!-- header -->
-		<div class="projectPageNav">
-			<div id="name" style="max-width: calc(100%-240px); margin-right: auto; margin-left: auto;">
+		<div class="hideMobile landingPageNav">
+			<div id="name">
 				<a href="index.html"><h1>Sophia Spitulnik</h1></a>
 			</div>
+			<div id="navigationGroup">
+				<a href="about.html"><h3 class="navigation">About</h3></a>
+			</div>
 		</div>
+
+		<div class="hideDesktop" style="position: fixed;">
+			<div id="navigationGroup">
+				<a href="index.html"><h1>Sophia Spitulnik</h1></a>
+				<a href="about.html"><h3 class="navigation">About</h3></a>
+			</div>
+		</div>
+
+
 
 		<!-- Intro -->
 		<div class="intro">
@@ -106,9 +118,6 @@
 								</div>	
 							</div>
 					</div>
-				</div>
-				<div class="fullImageContainer">
-					
 				</div>
 			</div>
 
@@ -256,7 +265,7 @@
 							<p class="column basicText"><span>The site is divided into 4 sections:</span> “How to Vote”, “Issues and Candidates”, “Upcoming Elections” and “FAQ”. Before asking the user for any information (such as the state that they live in or their zip code), it is important to engage them and show them that the website has something to offer. Because of this, the user is first presented with a reassuring statement about the purpose of the website, then prompted to select which section of the website interests them and then, after they are engaged and see the website has value, asked to provide personal information like state or zip code.</p>
 					</div>
 				</div>
-				<div class="fullImageContainer" style="width:90%">
+				<div class="fullImageContainer" style="width: 100%;">
 					<img src="images/TheVotingProjectAssets/theVotingProjectLandingPageMockup.jpg" alt="The voting project landing page" class="firstImage">
 					<div class="twoColumns" style="
 								justify-content: flex-end;
@@ -280,15 +289,15 @@
 							<img src="images/TheVotingProjectAssets/voteByMailMockup2.gif" alt="vote by mail information" class="votingUserFlow" style="margin-top: 24px">
 						</div>
 					</div>
-					<div class="twoColumns" style="margin-top: 96px">
+					<div class="twoColumns" id="extraTopMargin">
 						<img src="images/TheVotingProjectAssets/issuesAndCand.gif" alt="Issues and Candidates" class="votingMockup">
 						<p class="column basicText""><span>Issues and Candidates:</span> Users can see issues and candidates that are up for election in their state. They can change the state at any time.</p>
 					</div>
-					<div class="twoColumns" style="margin-top: 200px">
+					<div class="twoColumns" id="extraTopMargin">
 						<p class="column basicText"><span>Upcoming Elections:</span> Users can read about upcoming elections in their state or region. Each of the measures, bills or candidates that are up for vote are listed under the election date.</p>
 						<img src="images/TheVotingProjectAssets/upcomingElections.jpg" alt="Upcoming Elections" class="votingMockup">
 					</div>
-					<div class="twoColumns" style="margin-top: 200px; margin-bottom: 200px;">
+					<div class="twoColumns" id="extraTopMargin">
 						<img src="images/TheVotingProjectAssets/faqSearch.jpg" alt="FAQ submit a new question" class="votingMockup">
 						<p class="column basicText""><span>FAQ:</span> Users can scroll through frequently asked questions, search for a question or submit a question that has not yet been answered.</p>	
 					</div>

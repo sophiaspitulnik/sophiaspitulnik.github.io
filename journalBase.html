@@ -16,9 +16,19 @@
 
 	<body>
 		<!-- header -->
-		<div class="projectPageNav">
-			<div id="name" style="max-width: calc(100%-240px); margin-right: auto; margin-left: auto;">
+		<div class="hideMobile landingPageNav">
+			<div id="name">
 				<a href="index.html"><h1>Sophia Spitulnik</h1></a>
+			</div>
+			<div id="navigationGroup">
+				<a href="about.html"><h3 class="navigation">About</h3></a>
+			</div>
+		</div>
+
+		<div class="hideDesktop" style="position: fixed;">
+			<div id="navigationGroup">
+				<a href="index.html"><h1>Sophia Spitulnik</h1></a>
+				<a href="about.html"><h3 class="navigation">About</h3></a>
 			</div>
 		</div>
 
@@ -79,9 +89,9 @@
 					<h3>Problem Statement</h3>
 					<div class="sectionContent">
 						<p class="basicText"><strong>Readers of news articles often have little to no information about who wrote the article, this person's point of view and how reliably they can tell the story.</strong></p>
-						<div style="display: flex; flex-direction: row; width: 100%;">
-							<img src="images/JournalBaseAssets/badExample2.png" alt="bad example" style="align-self: center; width: 30vw;">
-							<img src="images/JournalBaseAssets/badExample1.png" alt="bad example" style="align-self: center; width: 30vw;">
+						<div id="problemImages">
+							<img src="images/JournalBaseAssets/badExample2.png" alt="bad example">
+							<img src="images/JournalBaseAssets/badExample1.png" alt="bad example">
 						</div>
 						<p class="basicText" style="margin-top: 0px;">News articles usually provide readers with a byline attributed to the content creator/s. How do we determine whether a journalist’s credentials are legitimate? Credibility is often connected to the publication a journalist works for. While credibility should be applied here, there should be more pressure on how stories are assigned and who can reliably tell what story. Even if news organizations may be covering more diverse topics, the authorship may not necessarily reflect the same levels of diversity and that’s a problem. Marginalized voices aren’t being represented. News media publications do a poor job of providing consumers with a quick and easy way to get in contact with journalists and supply more context.</p>
 
@@ -120,14 +130,27 @@
 				<div class="section">
 					<h3>JournalBase</h3>
 					<div class="sectionContent">
-						
+						<p class="column basicText"">Users can hover over the name of an author and see a pop up with information about the authors background such as their education, current employment, beat and other articles that they have written.</p>
 					</div>
 				</div>
-				<div class="fullImageContainer">
-					<img class="basicText" src="images/JournalBaseAssets/chromePluginDT.gif" alt="ideation">
-					<img class="basicText" src="images/JournalBaseAssets/chromePluginMB.gif" alt="ideation">
-					<img class="basicText" src="images/JournalBaseAssets/jbMockups.png" alt="ideation">
-					<img class="basicText" src="images/JournalBaseAssets/jbMockups-1.png" alt="ideation">
+				<div class="fullImageContainer" style="width: 100%;">
+					<img class="basicText" src="images/JournalBaseAssets/chromePluginDTNobackground.gif" alt="ideation">
+					<div class="twoColumns" style="margin-top: 96px">
+						<img class="basicText" src="images/JournalBaseAssets/chromePluginMB.gif" alt="ideation" style="max-height: 80vh; width: auto; width: auto;">
+						<p class="column basicText">This is a speculative design for how this could translate to a mobile website. Even though browser plugins are not available for mobile yet, the pop up would function similarly.</p>
+					</div>
+					<div class="twoColumns" style="margin-top: 96px">
+						<p class="column basicText">The user can also view featured journalists and search for journalists on the app or website.</p>
+						<img class="basicText" src="images/JournalBaseAssets/jbMockups1.png" alt="ideation" style="max-height: 80vh; width: auto;max-width: 100%;">
+					</div>
+					<div class="twoColumns" style="margin-top: 96px">
+						<img class="basicText" src="images/JournalBaseAssets/jbMockups2.png" alt="ideation" style="max-height: 80vh; width: auto; max-width: 100%;">
+						<p class="column basicText">Journalbase has a website and an app. The website can be used when a user is reading articles online and the app can be used when a user is reading articles on a news app.</p>
+					</div>
+					<div class="twoColumns" style="margin-top: 96px">
+						<p class="column basicText">If a journalist wishes, they can claim limited editing privileges to their profile by verifying their identity. However, their changes must be approve to prevent journalists from skewing the information on their profiles.</p>
+						<img class="basicText" src="images/JournalBaseAssets/jbMockups3.png" alt="ideation" style="max-height: 80vh; width: auto; max-width: 100%;">
+					</div>
 				</div>
 			</div>
 
@@ -135,7 +158,7 @@
 			<!-- User Flow -->
 			<div id="journalBaseUserFlow">
 				<div class="section">
-					<h3>User Flows</h3>
+					<h3>User Flow</h3>
 					<div class="sectionContent">
 						<p class="basicText">Coming soon!</p>
 					</div>
@@ -159,15 +182,15 @@
 				<div class="section">
 					<h3>Next Project</h3>
 					<div class="sectionContent projectPreviewsNextProj basicText">
-						<div class="projectPreviewNextProject"><a href="thevotingproject.html">
-								<img src="images/landingPageAssets/theVotingProjectPreview.jpg" alt="The Voting Project">
-								<h5>The Voting Project</h5>
-								<h6>A case study for a campaign to encourage  Generation Z to vote.</h6>
-						</a></div>
 						<div class="projectPreviewNextProject"><a href="expressiveonomatopoeias.html">
 								<img src="images/landingPageAssets/OnomatopoeiaPreview.gif" alt="Expressive Onomatopoeias" height="" width="">
 								<h5>Expressive Onomatopoeias</h5>
 								<h6>A study of nonverbal communication in texting.</h6>
+						</a></div>
+						<div class="projectPreviewNextProject"><a href="thevotingproject.html">
+								<img src="images/landingPageAssets/theVotingProjectPreview.jpg" alt="The Voting Project">
+								<h5>The Voting Project</h5>
+								<h6>A case study for a campaign to encourage  Generation Z to vote.</h6>
 						</a></div>
 					</div>
 				</div>

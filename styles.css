@@ -66,7 +66,7 @@ video.column {
 	position: static; 
 	z-index: 110; 
 	top: 0;
-	background-color: rgba(255, 255, 255, 0.97);
+	background-color: rgba(245, 245, 248, 0.95);
 	overflow: hidden;
 }
 
@@ -165,7 +165,9 @@ a {
 	position: static; 
 	z-index: 110; 
 	top: 0;
-	background-color: rgba(255, 255, 255, 0.97);
+	background-color: rgba(245, 245, 248, 0.90);
+	color: #26272C; 
+	box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.04), 0 4px 20px 0 rgba(0, 0, 0, 0.03);
 }
 
 .projectPageNav {
@@ -292,7 +294,6 @@ main h3, main h4, main p, #introMessage {
 	justify-content: center;
 	margin-right: auto;
 	margin-left: auto;
-
 }
 
 .projectPreviews {
@@ -341,7 +342,7 @@ main h3, main h4, main p, #introMessage {
 
 .projectPreview, .projectPreviewNextProject {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 6px 20px 0 rgba(0, 0, 0, 0.03), 0 -4px 8px 0 rgba(0, 0, 0, 0.02), 0 -6px 20px 0 rgba(0, 0, 0, 0.03);
-	padding-bottom: 24px;
+	padding-bottom: 36px;
 	margin-bottom: 24px;
 	margin-right: 16px;
 	margin-left: 16px;
@@ -371,7 +372,6 @@ main h3, main h4, main p, #introMessage {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	padding-top: 24px;
-
 }
 
 .projectPreview h6, .projectPreviewNextProject h6 {
@@ -379,21 +379,19 @@ main h3, main h4, main p, #introMessage {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	padding-top: 8px;
-	padding-bottom: 40px;
 	font-weight: normal;
-
 }
 
 
 /*Project Page Specific*/
 
-#votingResearch, #votingStrategy, #votingIdeation, #votingSocial, #votingPitch, #votingBudget, #brainTeam, #brainIdeation, #brainPrototype, .nextProject, #onomatopoeiasIdeation, #onomatopoeiasReflection, #votingWireframes, #linkedinResearch, #linkedinProblem, #linkedinBrainstorm, #linkedinFeedback, #linkedinNext, #journalBaseIdeation, #journalBaseMockups, #journalBaseReflection {
+#votingResearch, #votingStrategy, #votingIdeation, #votingSocial, #votingPitch, #votingBudget, #brainTeam, #brainIdeation, #brainPrototype, .nextProject, #onomatopoeiasIdeation, #onomatopoeiasReflection, #votingWireframes, #linkedinResearch, #linkedinProblem, #linkedinBrainstorm, #linkedinFeedback, #linkedinNext, #journalBaseIdeation, #journalBaseMockups, #journalBaseReflection, #ideasUsers, #ideasBranding, #ideasPrototype, #ideasPitch {
 	background-color: #F5F5F8;
 	padding-top: 24px;
 	padding-bottom: 96px;
 }
 
-#votingBackground, #votingUsers, #votingWebsite, #votingTransportation, #votingVisual, #votingConclusion, #brainBackground, #brainUsers, #brainMockups, #brainReflection, #onomatopoeiasBackground, #onomatopoeiasResearch, #onomatopoeiasGIFs, #votingFlow, #linkedinBackground, #linkedinPersona, #linkedinGoals, #linkedinWireframes, #linkedinMockups, #journalBaseBackground, #journalBaseWireframes, #journalBaseUserFlow {
+#votingBackground, #votingUsers, #votingWebsite, #votingTransportation, #votingVisual, #votingConclusion, #brainBackground, #brainUsers, #brainMockups, #brainReflection, #onomatopoeiasBackground, #onomatopoeiasResearch, #onomatopoeiasGIFs, #votingFlow, #linkedinBackground, #linkedinPersona, #linkedinGoals, #linkedinWireframes, #linkedinMockups, #journalBaseBackground, #journalBaseWireframes, #journalBaseUserFlow, #ideasBackground, #ideasWireframes, #ideasMockups, #ideasBusiness {
 	padding-top: 24px;
 	padding-bottom: 96px;
 }
@@ -420,7 +418,7 @@ main h3, main h4, main p, #introMessage {
 	color: white;
 }
 
-#votingProblem p strong, #votingStrategy p strong, #brainOProblem p strong, #brainNProblem p strong, #onomatopoeiasResearch p strong {
+#votingProblem p strong, #votingStrategy p strong, #brainOProblem p strong, #brainNProblem p strong, #onomatopoeiasResearch p strong, #journalBaseProblem p strong {
 	font-size: 18pt;
 	line-height: 1.4;
 }
@@ -431,7 +429,7 @@ main h3, main h4, main p, #introMessage {
 }
 
 #onomatopoeiasFProblem p strong, #onomatopoeiasSProblem p strong, #journalBaseProblem p strong {
-	font-size: 24pt;
+	font-size: 18pt;
 	line-height: 1.4;
 
 }
@@ -679,7 +677,7 @@ p.researchStatText {
 #problemImages {
 	padding-top: 12px;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-around;
 	width: 100%;
 }
@@ -687,7 +685,7 @@ p.researchStatText {
 #problemImages img {
 	margin-bottom: 12px;
 	padding: 4px;
-	width: 30%;
+	width: 90%;
 	align-self: center;
 }
 
@@ -815,12 +813,12 @@ video.userFlowVideo {
 
 	/*General Project page*/
 
-	#votingResearch, #votingTeam, #votingStrategy, #votingIdeation, #votingSocial, #votingPitch, #votingBudget, #brainTeam, #brainIdeation, #brainTeam, #brainIdeation, #brainPrototype, .nextProject, #onomatopoeiasIdeation, #onomatopoeiasReflection, #votingWireframes, #linkedinResearch, #linkedinProblem, #linkedinBrainstorm, #linkedinFeedback, #linkedinNext, #journalBaseBackground, #journalBaseIdeation, #journalBaseMockups, #journalBaseReflection {
+	#votingResearch, #votingTeam, #votingStrategy, #votingIdeation, #votingSocial, #votingPitch, #votingBudget, #brainTeam, #brainIdeation, #brainTeam, #brainIdeation, #brainPrototype, .nextProject, #onomatopoeiasIdeation, #onomatopoeiasReflection, #votingWireframes, #linkedinResearch, #linkedinProblem, #linkedinBrainstorm, #linkedinFeedback, #linkedinNext, #journalBaseBackground, #journalBaseIdeation, #journalBaseMockups, #journalBaseReflection, #ideasUsers, #ideasBranding, #ideasPrototype, #ideasPitch {
 		padding-top: 96px;
 		padding-bottom: 96px;
 	}
 
-	#brainOProblem, #brainNProblem, #votingProblem, #votingBackground, #votingUsers, #votingWebsite, #votingTransportation, #votingVisual, #votingConclusion, #brainBackground, #brainUsers, #brainMockups, #brainReflection, #onomatopoeiasBackground, #onomatopoeiasResearch, #onomatopoeiasGIFs, #onomatopoeiasFProblem, #onomatopoeiasSProblem, #votingFlow, #linkedinBackground, #linkedinPersona, #linkedinGoals, #linkedinWireframes, #linkedinMockups, #journalBaseProblem, #journalBaseWireframes, #journalBaseUserFlow {
+	#brainOProblem, #brainNProblem, #votingProblem, #votingBackground, #votingUsers, #votingWebsite, #votingTransportation, #votingVisual, #votingConclusion, #brainBackground, #brainUsers, #brainMockups, #brainReflection, #onomatopoeiasBackground, #onomatopoeiasResearch, #onomatopoeiasGIFs, #onomatopoeiasFProblem, #onomatopoeiasSProblem, #votingFlow, #linkedinBackground, #linkedinPersona, #linkedinGoals, #linkedinWireframes, #linkedinMockups, #journalBaseProblem, #journalBaseWireframes, #journalBaseUserFlow, #ideasBackground, #ideasWireframes, #ideasMockups, #ideasBusiness {
 		padding-top: 96px;
 		padding-bottom: 96px;
 	}
@@ -1075,7 +1073,7 @@ video.userFlowVideo {
 		width: 31%;
 		margin-left: 0px;
 		margin-right: 0px;
-		padding-bottom: 0px;
+		padding-bottom: 36px;
 		margin-top: 16px;
 		margin-bottom: 0px;
 	}
@@ -1265,6 +1263,10 @@ video.userFlowVideo {
 		align-self: center;
 		margin-top: 0px;
 	}
+
+	#extraTopMargin {
+		margin-top: 100px;
+	}
 		
 
 	.votingMockup {
@@ -1374,13 +1376,13 @@ video.userFlowVideo {
 @media (min-width: 768px) and (max-width: 1000px) {
 	
 	
-	#votingResearch, #votingStrategy, #votingIdeation, #votingSocial, #votingPitch, #votingBudget, #brainTeam, #brainIdeation, .nextProject, #onomatopoeiasIdeation, #onomatopoeiasReflection, #votingWireframes, #linkedinResearch, #linkedinProblem, #linkedinBrainstorm, #linkedinFeedback, #linkedinNext, #journalBaseBackground, #journalBaseIdeation, #journalBaseMockups, #journalBaseReflection {
+	#votingResearch, #votingStrategy, #votingIdeation, #votingSocial, #votingPitch, #votingBudget, #brainTeam, #brainIdeation, .nextProject, #onomatopoeiasIdeation, #onomatopoeiasReflection, #votingWireframes, #linkedinResearch, #linkedinProblem, #linkedinBrainstorm, #linkedinFeedback, #linkedinNext, #journalBaseBackground, #journalBaseIdeation, #journalBaseMockups, #journalBaseReflection, #ideasUsers, #ideasBranding, #ideasPrototype, #ideasPitch {
 		background-color: #f4f4f4;
 		padding-top: 96px;
 		padding-bottom: 96px;
 	}
 
-	#votingProblem, #votingBackground, #votingUsers, #votingWebsite, #votingTransportation, #votingVisual, #votingConclusion, #brainBackground, #brainUsers, #brainMockups, #brainReflection, #onomatopoeiasBackground, #onomatopoeiasResearch, #onomatopoeiasGIFs, #onomatopoeiasFProblem, #onomatopoeiasSProblem, #votingFlow, #linkedinBackground, #linkedinPersona, #linkedinGoals, #linkedinWireframes, #linkedinMockups, #journalBaseProblem, #journalBaseWireframes, #journalBaseUserFlow {
+	#votingProblem, #votingBackground, #votingUsers, #votingWebsite, #votingTransportation, #votingVisual, #votingConclusion, #brainBackground, #brainUsers, #brainMockups, #brainReflection, #onomatopoeiasBackground, #onomatopoeiasResearch, #onomatopoeiasGIFs, #onomatopoeiasFProblem, #onomatopoeiasSProblem, #votingFlow, #linkedinBackground, #linkedinPersona, #linkedinGoals, #linkedinWireframes, #linkedinMockups, #journalBaseProblem, #journalBaseWireframes, #journalBaseUserFlow, #ideasBackground, #ideasWireframes, #ideasMockups, #ideasBusiness {
 		padding-top: 96px;
 		padding-bottom: 96px;
 	}
@@ -1399,7 +1401,7 @@ video.userFlowVideo {
 		padding-right: 24px;
 	}
 
-	.hideMobile {
+noteinteractions.png	.hideMobile {
 		display: inline;
 	}
 
@@ -1528,7 +1530,7 @@ video.userFlowVideo {
 		margin-right: 0px;
 		margin-top: 0px;
 		margin-bottom: 0px;
-		padding-bottom: 0px;
+		padding-bottom: 36px;
 	}
 
 	.projectPreviewNextProject {
@@ -1537,7 +1539,7 @@ video.userFlowVideo {
 		margin-right: 0px;
 		margin-top: 0px;
 		margin-bottom: 48px;
-		padding-bottom: 0px;
+		padding-bottom: 36px;
 	}
 
 	.bottom {
@@ -1799,6 +1801,10 @@ video.userFlowVideo {
 		max-width: 30%;
 		align-self: center;
 		margin-top: 0px;
+	}
+
+	#extraTopMargin {
+		margin-top: 100px;
 	}
 	
 
