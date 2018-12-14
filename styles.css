@@ -96,7 +96,7 @@ a#comingSoonMobil:focus .overlay, a#comingSoonMobil:active .overlay {
 	width: 100%;
 	opacity: 0;
 	transition: .5s ease;
-	background-color: #FFE845;
+	background-color: #6CE4B2;
 	z-index: 100;
 }
 
