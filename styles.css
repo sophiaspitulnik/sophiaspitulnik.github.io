@@ -1127,7 +1127,7 @@ video.userFlowVideo {
 		width: calc(90% - 96px);
 		padding-right: 48px;
 		padding-left: 48px;
-		padding-top: 24px;
+		padding-top: 64px;
 	}
 
 	#about .section {
@@ -1623,7 +1623,7 @@ noteinteractions.png	.hideMobile {
 		width: calc(90% - 96px);
 		padding-right: 48px;
 		padding-left: 48px;
-		padding-top: 64px;
+		padding-top: 80px;
 	}
 
 	#about .section {
