@@ -583,7 +583,8 @@ hr.highLevelCategory {
 }
 
 .link {
-	text-decoration: underline;
+	border-bottom: 2px solid;
+	/*text-decoration: underline;*/
 	color: #9196A4;
 }
 
@@ -793,6 +794,26 @@ img.brainMockup {
 	align-self: center;
 	margin-right: 16px;
 	margin-left: 16px;
+}
+
+/*cool stuff specific*/
+
+.coolStuffSideBySide {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	justify-content: center;
+}
+
+.coolStuffSideBySide div {
+	width: 100%;
+	height: auto;
+	align-self: center;
+}
+
+.coolStuffSideBySide img {
+	padding: 48px;
 }
 
 
@@ -1102,8 +1123,6 @@ video.userFlowVideo {
 	}
 
 	#introMessage {
-		margin-left: 5vw;
-		margin-right: 5vw;
 		margin-bottom: 0px;
 		margin-top: 24px;
     	padding-top: 144px;
@@ -1115,7 +1134,7 @@ video.userFlowVideo {
 		position: fixed; 
 		z-index: 0; 
 		top: 0;
-		width: calc(90% - 208px);
+		width: 100%;
 	}
 
 	#about {
@@ -1140,9 +1159,9 @@ video.userFlowVideo {
 	}
 
 	#introParagraph {
-		font-size: 18pt; 
+		font-size: 14pt; 
 		margin-left: 35vw; 
-		max-width: 600px;
+		max-width: 45%;
 		margin-top: -16px;
 	}
 
@@ -1304,6 +1323,24 @@ video.userFlowVideo {
 		width: 40%;
 		height: auto;
 		align-self: center;
+	}
+
+	/*cool stuff specific*/
+
+	.coolStuffSideBySide {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.coolStuffSideBySide div {
+		width: 40%;
+		height: auto;
+		align-self: center;
+	}
+
+	.coolStuffSideBySide img {
+		padding: 48px;
 	}
 
 
@@ -1584,8 +1621,6 @@ noteinteractions.png	.hideMobile {
 	}
 
 	#introMessage {
-		margin-left: 5vw;
-		margin-right: 5vw;
 		margin-bottom: 0px;
 		margin-top: 24px;
 		padding-top: 128px;
@@ -1597,11 +1632,11 @@ noteinteractions.png	.hideMobile {
 		position: fixed; 
 		z-index: 0; 
 		top: 0;
-		width: calc(90% - 208px);
+		width: 100%;
 	}
 
 	#introParagraph {
-		font-size: 16pt; 
+		font-size: 14pt; 
 		margin-left: 0vw; 
 		max-width: 600px;
 		margin-top: 0px;
@@ -1808,6 +1843,26 @@ noteinteractions.png	.hideMobile {
 	#personaSideBySide img, #personaSideBySide p {
 		align-self: center;
 		width: 40%;
+	}
+
+
+
+	/*cool stuff specific*/
+
+	.coolStuffSideBySide {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.coolStuffSideBySide div {
+		width: 40%;
+		height: auto;
+		align-self: center;
+	}
+
+	.coolStuffSideBySide img {
+		padding: 48px;
 	}
 
 	.twoColumns {
