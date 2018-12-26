@@ -300,7 +300,8 @@ main h3, main h4, main p, #introMessage {
 .projectPreviews, .projectPreviewsNextProj{
 	z-index: 51; 
 	position: absolute; 
-	margin-top: 80vh;
+	margin-top: 70vh;
+	padding-top: 24px;
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
