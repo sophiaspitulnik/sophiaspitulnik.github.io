@@ -12,6 +12,8 @@
 	    <link rel="stylesheet" href="styles.css">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+    	<script src="sketch.js"></script>
 	</head>
 	<body>
 		<div class="hideMobile landingPageNav" style="background-color: white;">
@@ -33,16 +35,17 @@
 			</div>
 		</div>
 
-		<div style="width: 100%; height: auto">
+		<div class="introBackground">
 			<div id="introMessage">
-				<h2 id="introHello">I'm a designer.</h2>
+				<h2 id="introHello">I'm a problem solver.</h2>
 				<div>
 					<p class="basicText" id="introParagraph">I design engaging digital experiences to make information and products easy to use and enjoyable. I have completed internships at Digitas digital marketing agency and TenenGroup e-commerce firm. I am a Senior at the <a href="https://www.risd.edu/" style="color: #9196A4;">Rhode Island School of Design and graduating in June.</a> </p>
 				</div>
 			</div>
+			<div id="sketchHolder" class="hideMobile" style="z-index: -200"></div>
 		</div>
 
-		<a name="projectPreviews" style="top: -48"></a>
+	<a name="projectPreviews" style="top: -48"></a>
 		<div class="projectPreviews">
 			<div class="projectPreview top" style="z-index: 52"><a href="thevotingproject.html">
 					<img src="images/landingPageAssets/theVotingProjectPreview2.jpg" alt="The Voting Project">
