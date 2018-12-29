@@ -7,7 +7,7 @@ function setup() {
 }
 
 function draw() {
-	fill(255, 232, 69);
+	fill(rgba(0,255,0, 0.25));
 	noStroke();
 	ellipse(mouseX, mouseY, 200, 200);
 }
