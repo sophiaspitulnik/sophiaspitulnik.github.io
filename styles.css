@@ -259,22 +259,26 @@ main h3, main h4, main p, #introMessage {
 }
 
 #introMessage {
-	padding-top: 80px;
-	padding-bottom: 80px;
+	padding-top: 15vh;
+	padding-bottom: 15vh;
 	width: calc(100% - 32px);
     padding-right: 16px;
 }
 
 #introMessage h2 {
-	font-size: 56pt;
-	line-height: 1.3;
+	font-size: 24pt;
+	line-height: 1.1;
 	margin-top: 0px;
 	margin-bottom: 8px;
 }
 
+#introMessage h1 {
+	font-size: 18pt;
+}
+
 .introBackground {
 	width: 100%; 
-	height: 100%; 
+	height: 50vh; 
 	position: absolute; 
 	background-color: #F5F5F8;
 	z-index: -10;
@@ -316,6 +320,7 @@ main h3, main h4, main p, #introMessage {
 
 .projectPreviewsNextProj{
 	position: relative;
+	flex-direction: column;
 }
 
 .tags {
@@ -353,63 +358,190 @@ main h3, main h4, main p, #introMessage {
 		margin-top: 0px;
 }
 
-.projectPreviews img,  .projectPreviewsNextProj img{
-	width: 100%;
-	padding: 0px;
+.projectPreview h5, .projectPreviewNextProject h5 {
+	font-size: 14pt;
+	margin-top: 0px;
+	margin-bottom: 12px;
+	padding-top: 24px;
 }
 
-.projectPreview, .projectPreviewNextProject {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04), 0 6px 20px 0 rgba(0, 0, 0, 0.03), 0 -4px 8px 0 rgba(0, 0, 0, 0.02), 0 -6px 20px 0 rgba(0, 0, 0, 0.03);
-	padding-bottom: 36px;
-	margin-bottom: 24px;
-	margin-right: 16px;
-	margin-left: 16px;
-	background-color: white;
+.projectPreview h5, .projectPreview h6, .projectPreviewNextProject h5, .projectPreviewNextProject h6, .moreContentButton {
+	text-decoration: none;
 }
 
-.projectPreviewNextProject {
-	background-color: white;
+.hide {
+	visibility: hidden;
 }
 
+.buttonContainer {
+	text-align: center;
+	margin: 0px;
+}
 
-.projectPreview:hover, .projectPreviewNextProject:hover {
-	box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.17), 0 10px 24px 0 rgba(0, 0, 0, 0.15), 0 -8px 12px 0 rgba(0, 0, 0, 0.08), 0 -10px 24px 0 rgba(0, 0, 0, 0.10);
+.moreContentButton {
+	width: 50%;
+	margin-left: 24px;
+	margin-right: 24px;
+	padding-left: 24px;
+	padding-right: 24px;
+	padding-top: 18px;
+	padding-bottom: 14px;
+	line-height: 1.5;
+	border-radius: 30px;
+	color: white;
+	background-color: rgba(245, 245, 248, .6);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.07), 0 -4px 8px 0 rgba(0, 0, 0, 0.02), 0 -6px 20px 0 rgba(0, 0, 0, 0.03);
+	display: inline;
+	align-self: center;
+}
+
+.moreContentButton:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10), 0 10px 24px 0 rgba(0, 0, 0, 0.09), 0 -8px 12px 0 rgba(0, 0, 0, 0.05), 0 -10px 24px 0 rgba(0, 0, 0, 0.07);
+	background-color: rgba(245, 245, 248, .7);
 	transform: translateY(-2px);
 	transition: .5s ease;
 }
 
-
-.projectPreview h5, .projectPreview h6, .projectPreviewNextProject h5, .projectPreviewNextProject h6 {
-	padding-left: 24px;
-	padding-right: 24px;
-	text-decoration: none;
-}
-
-.projectPreview h5, .projectPreviewNextProject h5 {
-	font-size: 20pt;
+.projectPreview h6 {
+	font-size: 14pt;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	padding-top: 24px;
-}
-
-.projectPreview h6, .projectPreviewNextProject h6 {
-	font-size: 16pt;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding-top: 8px;
+	padding-top: 0px;
+	padding-bottom: 24px;
 	font-weight: normal;
+
+}
+
+.projectPreview h5 {
+	font-size: 20pt;
+	padding-top: 0px;
+}
+
+.projectPreview h6, .projectPreview h5 {
+	color: white;
+}
+
+.previewDescription {
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-right: 0px;
+}
+
+h6.descriptiveWords {
+	margin-bottom: 32px;
+	color: rgba(245, 245, 248, .6);
+}
+
+
+#landingPageContent {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.projectPreviews, .projectPreviewsNextProj {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 0px;
+	flex-wrap: wrap;
+}
+
+.projectPreviews {
+	margin-top: 50vh;
+	position: absolute;
+	flex-direction: column;
+	width: 100%;
+}
+
+.projectPreviewsNextProj {
+	flex-direction: column;
+	padding-left: 5%;
+	padding-right: 5%;
+	width: 90%;
+	padding-top: 48px;
+}
+
+.projectPreview {
+	width: 100%;
+	height: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-bottom: 48px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	box-shadow: none;
+	display: flex;
+}
+
+.projectPreviewInside {
+	width: 100%;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	padding-left: 16px;
+	padding-right: 16px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+.projectPreviewInside img {
+	align-self: center;
+    width: 90vw;
+    height: auto;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.projectPreviewInside div {
+	align-self: left;
+	align-content: center;
+	width: calc(100% - 16px);
+}
+
+.projectPreviewNextProject {
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 48px;
+	padding-bottom: 0px;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10), 0 10px 24px 0 rgba(0, 0, 0, 0.09), 0 -8px 12px 0 rgba(0, 0, 0, 0.05), 0 -10px 24px 0 rgba(0, 0, 0, 0.07);
+}
+
+.projectPreviewNextProject:hover {
+	box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.12), 0 11px 25px 0 rgba(0, 0, 0, 0.11), 0 -9px 13px 0 rgba(0, 0, 0, 0.07), 0 -11px 25px 0 rgba(0, 0, 0, 0.08);
+	transform: translateY(-2px);
+	transition: .5s ease;
+}
+
+.projectPreviewNextProject img {
+	width: 100%;
+	padding: 0px;
+}
+
+.projectPreviewNextProject h5, .projectPreviewNextProject h6 {
+	padding-right: 16px;
+	padding-left: 16px;
+	font-size: 13pt;
+}
+
+.projectPreviewNextProject h6 {
+	font-weight: normal;
+	margin-top: 24px;
+	margin-bottom: 48px;
 }
 
 
 /*Project Page Specific*/
 
-#votingStrategy, #votingUsers, #votingSocial, #votingPitch, #votingVisual, #votingBudget, #brainTeam, #brainIdeation, #brainPrototype, #onomatopoeiasIdeation, #onomatopoeiasReflection, #votingWireframes, #linkedinResearch, #linkedinProblem, #linkedinBrainstorm, #linkedinFeedback, #linkedinNext, #journalBaseIdeation, #journalBaseMockups, #journalBaseReflection, #ideasMockups, #ideasPrototype, #ideasPitch, #ideasResearch {
+#votingStrategy, #votingUsers, #votingVisual, #votingTransportation, #votingBudget, #brainTeam, #brainIdeation, #brainPrototype, #onomatopoeiasIdeation, #onomatopoeiasReflection, #votingWireframes, #linkedinResearch, #linkedinProblem, #linkedinBrainstorm, #linkedinFeedback, #linkedinNext, #journalBaseIdeation, #journalBaseMockups, #journalBaseReflection, #ideasMockups, #ideasPrototype, #ideasPitch, #ideasResearch {
 	background-color: #F5F5F8;
 	padding-top: 24px;
 	padding-bottom: 96px;
 }
 
-#votingResearch, #votingBackground, #votingIdeation, #votingWebsite, #votingTransportation, #votingConclusion, #brainBackground, #brainUsers, #brainMockups, #brainReflection, #onomatopoeiasBackground, #onomatopoeiasResearch, #onomatopoeiasGIFs, #votingFlow, #linkedinBackground, #linkedinPersona, #linkedinGoals, #linkedinWireframes, #linkedinMockups, #journalBaseBackground, #journalBaseWireframes, #journalBaseUserFlow, #ideasBackground, #ideasUsers, #ideasWireframes, #ideasBranding, #ideasBusiness, #ideasProblem, .processPreview {
+#votingResearch, #votingBackground, #votingPitch, #votingIdeation, #votingWebsite, #votingConclusion, #brainBackground, #brainUsers, #brainMockups, #brainReflection, #onomatopoeiasBackground, #onomatopoeiasResearch, #onomatopoeiasGIFs, #votingFlow, #linkedinBackground, #linkedinPersona, #linkedinGoals, #linkedinWireframes, #linkedinMockups, #journalBaseBackground, #journalBaseWireframes, #journalBaseUserFlow, #ideasBackground, #ideasUsers, #ideasWireframes, #ideasBranding, #ideasBusiness, #ideasProblem, .processPreview {
 	padding-top: 24px;
 	padding-bottom: 96px;
 }
@@ -443,6 +575,9 @@ main h3, main h4, main p, #introMessage {
 
 .nextProject {
 	background-color: #9196A4;
+	padding-top: 24px;
+	padding-bottom: 96px;
+	color: #26272C;
 }
 
 /*#votingProblem p, #votingProblem p span, #votingProblem h3, #brainOProblem p, #brainNProblem p, #brainOProblem h3, #brainNProblem h3 {
@@ -1105,12 +1240,9 @@ video.userFlowVideo {
 		margin-top: 0px;
 		margin-bottom: 12px;
 		padding-top: 24px;
-
 	}
 
-	.projectPreview h5, .projectPreview h6, .projectPreviewNextProject h5, .projectPreviewNextProject h6 {
-		padding-left: 32px;
-		padding-right: 32px;
+	.projectPreview h5, .projectPreview h6, .projectPreviewNextProject h5, .projectPreviewNextProject h6, .moreContentButton {
 		text-decoration: none;
 	}
 
@@ -1118,7 +1250,32 @@ video.userFlowVideo {
 		visibility: hidden;
 	}
 
-	.projectPreview h6, .projectPreviewNextProject h6 {
+	.buttonContainer {
+		text-align: left;
+	}
+
+	.moreContentButton {
+		margin-left: 0px;
+		padding-left: 24px;
+		padding-right: 24px;
+		padding-top: 18px;
+		padding-bottom: 14px;
+		line-height: 1.5;
+		border-radius: 30px;
+		color: white;
+		background-color: rgba(245, 245, 248, .6);
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.07), 0 -4px 8px 0 rgba(0, 0, 0, 0.02), 0 -6px 20px 0 rgba(0, 0, 0, 0.03);
+		display: inline;
+	}
+
+	.moreContentButton:hover {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10), 0 10px 24px 0 rgba(0, 0, 0, 0.09), 0 -8px 12px 0 rgba(0, 0, 0, 0.05), 0 -10px 24px 0 rgba(0, 0, 0, 0.07);
+		background-color: rgba(245, 245, 248, .7);
+		transform: translateY(-2px);
+		transition: .5s ease;
+	}
+
+	.projectPreview h6 {
 		font-size: 14pt;
 		margin-top: 0px;
 		margin-bottom: 0px;
@@ -1126,6 +1283,26 @@ video.userFlowVideo {
 		padding-bottom: 24px;
 		font-weight: normal;
 
+	}
+
+	.projectPreview h5 {
+		font-size: 35pt;
+		padding-top: 0px;
+	}
+
+	.projectPreview h6, .projectPreview h5 {
+		color: white;
+	}
+
+	.previewDescription {
+		padding-left: 48px;
+		padding-right: 0px;
+		margin-right: 0px;
+	}
+
+	h6.descriptiveWords {
+		margin-bottom: 32px;
+		color: rgba(245, 245, 248, .6);
 	}
 
 
@@ -1137,28 +1314,59 @@ video.userFlowVideo {
 
 	.projectPreviews, .projectPreviewsNextProj {
 		display: flex;
-		flex-direction: row;
 		justify-content: space-between;
-		padding-left: 5%;
-		padding-right: 5%;
 		padding-top: 0px;
 		flex-wrap: wrap;
-		max-width: 90%;
-		padding-top: 48px;
 	}
 
 	.projectPreviews {
 		margin-top: 80vh;
 		position: absolute;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.projectPreviewsNextProj {
+		flex-direction: row;
+		padding-left: 5%;
+		padding-right: 5%;
+		max-width: 90%;
+		padding-top: 48px;
 	}
 
 	.projectPreview {
-		width: 31%;
+		width: 100%;
+		height: 75vh;
 		margin-left: 0px;
 		margin-right: 0px;
-		padding-bottom: 36px;
-		margin-top: 16px;
+		padding-bottom: 0px;
+		margin-top: 0px;
 		margin-bottom: 0px;
+		box-shadow: none;
+		display: flex;
+	}
+
+	.projectPreviewInside {
+		width: 1000px;
+    	margin-right: auto;
+    	margin-left: auto;
+    	padding-top: 15vh;
+    	padding-bottom: 15vh;
+    	display: flex;
+		justify-content: space-around;
+		flex-direction: row;
+	}
+
+	.projectPreviewInside img {
+		align-self: center;
+		height: auto;
+		max-width: 45%;
+	}
+
+	.projectPreviewInside div {
+		align-self: center;
+		align-content: center;
+		width: 70%;
 	}
 
 	.projectPreviewNextProject {
@@ -1182,15 +1390,15 @@ video.userFlowVideo {
 
 	#introMessage {
 		margin-bottom: 0px;
-    	padding-top: 160px;
-		padding-right: 104px;
-		padding-left: 104px;
-		padding-bottom: 0px;
+    	padding-top: 20vh;
+		padding-right: 5%;
+		padding-left: 5%;
+		padding-bottom: 20vh;
 		height: 80vh;
 		position: absolute;
 		z-index: 0; 
 		top: 0;
-		width: calc(100% - 208px);
+		width: 90%;
 	}
 
 	.introBackground {
@@ -1511,7 +1719,6 @@ video.userFlowVideo {
 	}
 
 	.nextProject {
-		background-color: #404B5A;
 		padding-top: 96px;
 		padding-bottom: 96px;
 	}
@@ -1633,36 +1840,139 @@ video.userFlowVideo {
 	}
 
 
+	.projectPreview h5, .projectPreviewNextProject h5 {
+		font-size: 14pt;
+		margin-top: 0px;
+		margin-bottom: 12px;
+		padding-top: 24px;
+	}
+
+	.projectPreview h5, .projectPreview h6, .projectPreviewNextProject h5, .projectPreviewNextProject h6, .moreContentButton {
+		text-decoration: none;
+	}
+
+	.hide {
+		visibility: hidden;
+	}
+
+	.buttonContainer {
+		text-align: left;
+	}
+
+	.moreContentButton {
+		margin-left: 0px;
+		padding-left: 24px;
+		padding-right: 24px;
+		padding-top: 18px;
+		padding-bottom: 14px;
+		line-height: 1.5;
+		border-radius: 30px;
+		color: white;
+		background-color: rgba(245, 245, 248, .6);
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.07), 0 -4px 8px 0 rgba(0, 0, 0, 0.02), 0 -6px 20px 0 rgba(0, 0, 0, 0.03);
+		display: inline;
+	}
+
+	.moreContentButton:hover {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10), 0 10px 24px 0 rgba(0, 0, 0, 0.09), 0 -8px 12px 0 rgba(0, 0, 0, 0.05), 0 -10px 24px 0 rgba(0, 0, 0, 0.07);
+		background-color: rgba(245, 245, 248, .7);
+		transform: translateY(-2px);
+		transition: .5s ease;
+	}
+
+	.projectPreview h6 {
+		font-size: 14pt;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding-top: 0px;
+		padding-bottom: 24px;
+		font-weight: normal;
+
+	}
+
+	.projectPreview h5 {
+		font-size: 30pt;
+		padding-top: 0px;
+	}
+
+	.projectPreview h6, .projectPreview h5 {
+		color: white;
+	}
+
+	.previewDescription {
+		padding-left: 48px;
+		padding-right: 0px;
+		margin-right: 0px;
+	}
+
+	h6.descriptiveWords {
+		margin-bottom: 32px;
+		color: rgba(245, 245, 248, .6);
+	}
+
+
 	#landingPageContent {
-		width: 768px;
+		width: 100%;
 		margin-right: auto;
 		margin-left: auto;
 	}
 
 	.projectPreviews, .projectPreviewsNextProj {
 		display: flex;
-		flex-direction: row;
 		justify-content: space-between;
-		padding-left: 5%;
-		padding-right: 5%;
 		padding-top: 0px;
 		flex-wrap: wrap;
+	}
+
+	.projectPreviews {
+		margin-top: 60vh;
+		position: absolute;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.projectPreviewsNextProj {
+		flex-direction: row;
+		padding-left: 5%;
+		padding-right: 5%;
 		max-width: 90%;
 		padding-top: 48px;
 	}
 
-	.projectPreviews {
-		margin-top: 80vh;
-		position: absolute;
-	}
-
 	.projectPreview {
-		width: 48%;
+		width: 100%;
+		height: 75vh;
 		margin-left: 0px;
 		margin-right: 0px;
+		padding-bottom: 0px;
 		margin-top: 0px;
 		margin-bottom: 0px;
-		padding-bottom: 36px;
+		box-shadow: none;
+		display: flex;
+	}
+
+	.projectPreviewInside {
+		width: 750px;
+    	margin-right: auto;
+    	margin-left: auto;
+    	padding-top: 15vh;
+    	padding-bottom: 15vh;
+    	display: flex;
+		justify-content: space-around;
+		flex-direction: row;
+	}
+
+	.projectPreviewInside img {
+		align-self: center;
+		height: auto;
+		max-width: 45%;
+		width: 45%;
+	}
+
+	.projectPreviewInside div {
+		align-self: center;
+		align-content: center;
+		width: 70%;
 	}
 
 	.projectPreviewNextProject {
@@ -1671,18 +1981,7 @@ video.userFlowVideo {
 		margin-right: 0px;
 		margin-top: 0px;
 		margin-bottom: 48px;
-		padding-bottom: 36px;
-	}
-
-	.bottom {
-		padding-top: 0px;
-		margin-top: 16px;
-		margin-bottom: 16px;
-	}
-
-	.top {
-		margin-bottom: 16px;
-		margin-top: 16px;
+		padding-bottom: 0px;
 	}
 
 
@@ -1693,14 +1992,14 @@ video.userFlowVideo {
 	#introMessage {
 		margin-bottom: 0px;
 		padding-top: 144px;
-		padding-right: 104px;
-		padding-left: 104px;
+		padding-right: 5%;
+		padding-left: 5%;
 		padding-bottom: 0px;
-		height: 80vh;
+		height: 60vh;
 		position: absolute; 
 		z-index: 0; 
 		top: 0;
-		width: calc(100% - 208px);
+		width: 90%;
 	}
 
 	#introParagraph {
@@ -1719,7 +2018,7 @@ video.userFlowVideo {
 
 	.introBackground {
 		width: 100%; 
-		height: 100%; 
+		height: 60%; 
 		position: absolute; 
 		background-color: #F5F5F8;
 	}
@@ -1818,30 +2117,6 @@ video.userFlowVideo {
 
 	#dtResume {
 		position: static;
-	}
-
-	.projectPreview h5, .projectPreviewNextProject h5 {
-		font-size: 14pt;
-		margin-top: 0px;
-		margin-bottom: 12px;
-		padding-top: 24px;
-
-	}
-
-	.projectPreview h5, .projectPreview h6, .projectPreviewNextProject h5, .projectPreviewNextProject h6 {
-		padding-left: 32px;
-		padding-right: 32px;
-		text-decoration: none;
-	}
-
-	.projectPreview h6, .projectPreviewNextProject h6 {
-		font-size: 14pt;
-		margin-top: 0px;
-		margin-bottom: 0px;
-		padding-top: 0px;
-		padding-bottom: 24px;
-		font-weight: normal;
-
 	}
 
 	.nav {
