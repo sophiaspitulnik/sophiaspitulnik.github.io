@@ -535,13 +535,13 @@ h6.descriptiveWords {
 
 /*Project Page Specific*/
 
-#votingStrategy, #votingUsers, #votingVisual, #votingTransportation, #votingBudget, #brainTeam, #brainIdeation, #brainPrototype, #onomatopoeiasIdeation, #onomatopoeiasReflection, #votingWireframes, #linkedinResearch, #linkedinProblem, #linkedinBrainstorm, #linkedinFeedback, #linkedinNext, #journalBaseIdeation, #journalBaseMockups, #journalBaseReflection, #ideasMockups, #ideasPrototype, #ideasPitch, #ideasResearch, #impactSummitGallery {
+#votingStrategy, #votingUsers, #votingVisual, #votingTransportation, #votingBudget, #brainTeam, #brainIdeation, #brainPrototype, #onomatopoeiasIdeation, #onomatopoeiasReflection, #votingWireframes, #linkedinResearch, #linkedinProblem, #linkedinBrainstorm, #linkedinFeedback, #linkedinNext, #journalBaseIdeation, #journalBaseMockups, #journalBaseReflection, #ideasMockups, #ideasPrototype, #ideasPitch, #ideasResearch, #impactSummitGallery, .gray {
 	background-color: #F5F5F8;
 	padding-top: 24px;
 	padding-bottom: 96px;
 }
 
-#votingResearch, #votingBackground, #votingPitch, #votingIdeation, #votingWebsite, #votingConclusion, #brainBackground, #brainUsers, #brainMockups, #brainReflection, #onomatopoeiasBackground, #onomatopoeiasResearch, #onomatopoeiasGIFs, #votingFlow, #linkedinBackground, #linkedinPersona, #linkedinGoals, #linkedinWireframes, #linkedinMockups, #journalBaseBackground, #journalBaseWireframes, #journalBaseUserFlow, #ideasBackground, #ideasUsers, #ideasWireframes, #ideasBranding, #ideasBusiness, #ideasProblem, .processPreview, #impactSummitBackground {
+#votingResearch, #votingBackground, #votingPitch, #votingIdeation, #votingWebsite, #votingConclusion, #brainBackground, #brainUsers, #brainMockups, #brainReflection, #onomatopoeiasBackground, #onomatopoeiasResearch, #onomatopoeiasGIFs, #votingFlow, #linkedinBackground, #linkedinPersona, #linkedinGoals, #linkedinWireframes, #linkedinMockups, #journalBaseBackground, #journalBaseWireframes, #journalBaseUserFlow, #ideasBackground, #ideasUsers, #ideasWireframes, #ideasBranding, #ideasBusiness, #ideasProblem, .processPreview, #impactSummitBackground, .white {
 	padding-top: 24px;
 	padding-bottom: 96px;
 }
@@ -585,12 +585,12 @@ h6.descriptiveWords {
 	color: white;
 }*/
 
-#votingProblem p strong, #votingStrategy p strong, #brainOProblem p strong, #brainNProblem p strong, #onomatopoeiasResearch p strong, #journalBaseProblem p strong, #ideasProblem p strong, #votingUsers p strong, #votingResearch p strong, #votingWireframes p strong, #votingWebsite p strong, #brainUsers p strong, #brainMockups p strong, #brainIdeation p strong {
+#votingProblem p strong, #votingStrategy p strong, #brainOProblem p strong, #brainNProblem p strong, #onomatopoeiasResearch p strong, #journalBaseProblem p strong, #ideasProblem p strong, #votingUsers p strong, #votingResearch p strong, #votingWireframes p strong, #votingWebsite p strong, #brainUsers p strong, #brainMockups p strong, #brainIdeation p strong, #googleResearch p strong, #googlePersona p strong, #googleFlow p strong, #googleIdeation p strong, #googleNavigation p strong {
 	font-size: 18pt;
 	line-height: 1.4;
 }
 
-#votingStrategy p strong,  #brainUsers p strong, #onomatopoeiasResearch p strong, #ideasProblem p strong, #votingUsers p strong, #votingResearch p strong, #votingWireframes p strong, #votingWebsite p strong, #brainUsers p strong, #brainMockups p strong, #brainIdeation p strong {
+#votingStrategy p strong,  #brainUsers p strong, #onomatopoeiasResearch p strong, #ideasProblem p strong, #votingUsers p strong, #votingResearch p strong, #votingWireframes p strong, #votingWebsite p strong, #brainUsers p strong, #brainMockups p strong, #brainIdeation p strong, #googleResearch p strong, #googlePersona p strong, #googleFlow p strong, #googleIdeation p strong, #googleNavigation p strong {
 	color: #26272C;
 	line-height: 1.4;
 }
@@ -1028,18 +1028,18 @@ video.userFlowVideo {
 
 	/*General Project page*/
 
-	#votingTeam, #votingStrategy, #votingUsers, #votingSocial, #votingPitch, #votingBudget, #brainTeam, #brainIdeation, #brainTeam, #brainIdeation, #brainPrototype, .nextProject, #onomatopoeiasIdeation, #onomatopoeiasReflection, #votingWireframes, #linkedinResearch, #linkedinProblem, #linkedinBrainstorm, #linkedinFeedback, #linkedinNext, #journalBaseBackground, #journalBaseIdeation, #journalBaseMockups, #journalBaseReflection, #ideasMockups, #ideasPrototype, #ideasPitch, #ideasResearch, #impactSummitGallery {
+	#votingTeam, #votingStrategy, #votingUsers, #votingSocial, #votingPitch, #votingBudget, #brainTeam, #brainIdeation, #brainTeam, #brainIdeation, #brainPrototype, .nextProject, #onomatopoeiasIdeation, #onomatopoeiasReflection, #votingWireframes, #linkedinResearch, #linkedinProblem, #linkedinBrainstorm, #linkedinFeedback, #linkedinNext, #journalBaseBackground, #journalBaseIdeation, #journalBaseMockups, #journalBaseReflection, #ideasMockups, #ideasPrototype, #ideasPitch, #ideasResearch, #impactSummitGallery, .gray {
 		padding-top: 96px;
 		padding-bottom: 96px;
 	}
 
-	#votingResearch, #brainOProblem, #brainNProblem, #votingProblem, #votingIdeation, #votingBackground, #votingWebsite, #votingTransportation, #votingVisual, #votingConclusion, #brainBackground, #brainUsers, #brainMockups, #brainReflection, #onomatopoeiasBackground, #onomatopoeiasResearch, #onomatopoeiasGIFs, #onomatopoeiasFProblem, #onomatopoeiasSProblem, #votingFlow, #linkedinBackground, #linkedinPersona, #linkedinGoals, #linkedinWireframes, #linkedinMockups, #journalBaseProblem, #journalBaseWireframes, #journalBaseUserFlow, #ideasBackground, #ideasUsers, #ideasWireframes, #ideasBranding, #ideasBusiness, #ideasProblem, .processPreview, #impactSummitBackground {
+	#votingResearch, #brainOProblem, #brainNProblem, #votingProblem, #votingIdeation, #votingBackground, #votingWebsite, #votingTransportation, #votingVisual, #votingConclusion, #brainBackground, #brainUsers, #brainMockups, #brainReflection, #onomatopoeiasBackground, #onomatopoeiasResearch, #onomatopoeiasGIFs, #onomatopoeiasFProblem, #onomatopoeiasSProblem, #votingFlow, #linkedinBackground, #linkedinPersona, #linkedinGoals, #linkedinWireframes, #linkedinMockups, #journalBaseProblem, #journalBaseWireframes, #journalBaseUserFlow, #ideasBackground, #ideasUsers, #ideasWireframes, #ideasBranding, #ideasBusiness, #ideasProblem, .processPreview, #impactSummitBackground, .white {
 		padding-top: 96px;
 		padding-bottom: 96px;
 	}
 
 
-	#votingProblem p strong, #votingStrategy p strong, #brainOProblem p strong, #brainNProblem p strong, #ideasProblem p strong, #votingUsers p strong, #votingResearch p strong, #votingWireframes p strong, #votingWebsite p strong, #brainUsers p strong, #brainMockups p strong, #brainIdeation p strong {
+	#votingProblem p strong, #votingStrategy p strong, #brainOProblem p strong, #brainNProblem p strong, #ideasProblem p strong, #votingUsers p strong, #votingResearch p strong, #votingWireframes p strong, #votingWebsite p strong, #brainUsers p strong, #brainMockups p strong, #brainIdeation p strong, #googleResearch p strong, #googlePersona p strong, #googleFlow p strong, #googleIdeation p strong, #googleNavigation p strong {
 		font-size: 24pt;
 		line-height: 1.4;
 	}
@@ -1714,12 +1714,12 @@ video.userFlowVideo {
 @media (min-width: 768px) and (max-width: 1000px) {
 	
 	
-	#votingStrategy, #votingUsers, #votingSocial, #votingPitch, #votingBudget, #brainTeam, #brainIdeation, #onomatopoeiasIdeation, #onomatopoeiasReflection, #votingWireframes, #linkedinResearch, #linkedinProblem, #linkedinBrainstorm, #linkedinFeedback, #linkedinNext, #journalBaseBackground, #journalBaseIdeation, #journalBaseMockups, #journalBaseReflection, #ideasMockups, #ideasPrototype, #ideasPitch, #ideasResearch, #impactSummitGallery {
+	#votingStrategy, #votingUsers, #votingSocial, #votingPitch, #votingBudget, #brainTeam, #brainIdeation, #onomatopoeiasIdeation, #onomatopoeiasReflection, #votingWireframes, #linkedinResearch, #linkedinProblem, #linkedinBrainstorm, #linkedinFeedback, #linkedinNext, #journalBaseBackground, #journalBaseIdeation, #journalBaseMockups, #journalBaseReflection, #ideasMockups, #ideasPrototype, #ideasPitch, #ideasResearch, #impactSummitGallery, .gray {
 		padding-top: 96px;
 		padding-bottom: 96px;
 	}
 
-	#votingResearch, #votingProblem, #votingBackground, #votingIdeation, #votingWebsite, #votingTransportation, #votingVisual, #votingConclusion, #brainBackground, #brainUsers, #brainMockups, #brainReflection, #onomatopoeiasBackground, #onomatopoeiasResearch, #onomatopoeiasGIFs, #onomatopoeiasFProblem, #onomatopoeiasSProblem, #votingFlow, #linkedinBackground, #linkedinPersona, #linkedinGoals, #linkedinWireframes, #linkedinMockups, #journalBaseProblem, #journalBaseWireframes, #journalBaseUserFlow, #ideasBackground, #ideasUsers, #ideasWireframes, #ideasBranding, #ideasBusiness, #ideasProblem, .processPreview, #impactSummitBackground {
+	#votingResearch, #votingProblem, #votingBackground, #votingIdeation, #votingWebsite, #votingTransportation, #votingVisual, #votingConclusion, #brainBackground, #brainUsers, #brainMockups, #brainReflection, #onomatopoeiasBackground, #onomatopoeiasResearch, #onomatopoeiasGIFs, #onomatopoeiasFProblem, #onomatopoeiasSProblem, #votingFlow, #linkedinBackground, #linkedinPersona, #linkedinGoals, #linkedinWireframes, #linkedinMockups, #journalBaseProblem, #journalBaseWireframes, #journalBaseUserFlow, #ideasBackground, #ideasUsers, #ideasWireframes, #ideasBranding, #ideasBusiness, #ideasProblem, .processPreview, #impactSummitBackground, .white {
 		padding-top: 96px;
 		padding-bottom: 96px;
 	}
@@ -1729,7 +1729,7 @@ video.userFlowVideo {
 		padding-bottom: 96px;
 	}
 
-	#votingProblem p strong, #votingStrategy p strong, #brainOProblem p strong, #brainNProblem p strong, #ideasProblem p strong, #votingUsers p strong, #votingResearch p strong, #votingWireframes p strong, #votingWebsite p strong, #brainUsers p strong, #brainMockups p strong, #brainIdeation p strong {
+	#votingProblem p strong, #votingStrategy p strong, #brainOProblem p strong, #brainNProblem p strong, #ideasProblem p strong, #votingUsers p strong, #votingResearch p strong, #votingWireframes p strong, #votingWebsite p strong, #brainUsers p strong, #brainMockups p strong, #brainIdeation p strong, #googleResearch p strong, #googlePersona p strong, #googleFlow p strong, #googleIdeation p strong, #googleNavigation p strong {
 		font-size: 24pt;
 		line-height: 1.4;
 	}

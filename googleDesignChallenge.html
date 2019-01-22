@@ -38,8 +38,8 @@
 		<!-- Intro -->
 		<div class="intro">
 			<h1 class="column">Google Design Exercise</h1>
-			<h2 class="column">A website for students to browse, search and propose new student organizations.</h2>
-			<img class="basicText" src="images/" alt="Google deisgn challenge" class="firstImage">
+			<h2 class="column">An app for students to browse, search and propose new student organizations.</h2>
+			<img class="basicText" src="images/googleAssets/mockups.png" alt="Google deisgn challenge" class="firstImage">
 			<!-- <img src="images/TheVotingProjectAssets/votingProjTableOfContents.png" alt="Table of contents"> -->
 		</div>
 
@@ -49,7 +49,7 @@
 		<main class="projectPageContent">
 
 			<!-- background info -->
-			<div id="journalBaseBackground">
+			<div id="googleBackground" class="white">
 				<div class="section">
 					<h3>The Ask</h3>
 					<div class="sectionContent">
@@ -58,29 +58,35 @@
 				</div>
 				<div class="fullImageContainer processPreview">
 					<p class="basicText"><strong>Process Summary:</strong></p>
-					<img src="images/" alt="Process" class="projectProcess basicText">
+					<img src="images/googleAssets/googleProcess.png" alt="Process" class="projectProcess basicText">
 				</div>
 			</div>
 
 			<!-- research -->
-			<div id="googleResearch">
+			<div id="googleResearch" class="gray">
 				<div class="section">
 					<h3>Research</h3>
 					<div class="sectionContent">
 						<p class="basicText"><strong>Who are the users? What do they need?</strong></p>
-						<p class="basicText">A had a few casual conversations with my classmates to better understand what they were looking for when looking join student organizations as Freshman.</p>
+						<p class="basicText">I had a few casual conversations with my classmates to better understand what they were looking for when looking join student organizations as Freshman.</p>
 						<p class="basicText"><span>Key Insights:</span></p>
 						<ol>
 							<li>Some students already knew what clubs they wanted to join before they got to campus while others discovered clubs during or after orientation.</li>
 							<li>Some students didn’t even know that they could propose new student organizations when they first got to campus.</li>
 						</ol>
+					</div>
+				</div>
+				<div class="section" style="margin-top: 48px;">
+					<h3 style="border-top: none;"></h3>
+					<div class="sectionContent">
 						<p class="basicText"><strong>How is this problem already being solved?</strong></p>
+						<p class="basicText">Students at my school find student organizations through OrgSync (a platform specifically for student organizations), word of mouth and through Facebook events that the organizations post.</p>
 						<div class="sideBySide">
-							<div style="flex: 1.5; margin-right: 24px; padding-top: 0px;">
-								<img src="images/" alt="OrgSync" class="basicText" style="width: 100%; height: auto; vertical-align: middle;">
+							<div style="flex: 1; margin-right: 24px; padding-top: 0px;">
+								<img src="images/googleAssets/orgsync.jpeg" alt="OrgSync" class="basicText" style="width: auto; height: 400px; vertical-align: middle;">
 							</div>
 							<div style="flex: 1; margin-right: 24px;">
-								<img src="images/" alt="Facebook" class="basicText" style="width: 100%; height: auto; vertical-align: middle;">
+								<img src="images/googleAssets/facebook.jpeg" alt="Facebook" class="basicText" style="width: auto; height: 400px; vertical-align: middle;">
 							</div>
 						</div>
 						<p class="basicText"><span>Limitations:</span></p>
@@ -92,71 +98,141 @@
 				</div>
 			</div>
 
-			<div id="googleOpportunity">
+			<div id="googleOpportunity" class="white">
 				<div class="section">
 					<h3>Opportunity Definition</h3>
 					<div class="sectionContent">
 						<p class="basicText"><span>Problem Statement:</span> Students lack a user friendly platform to search for student organizations that they are interested in, discover new organizations that they don’t know about yet and be encouraged to propose new organizations.</p>
+						<p class="basicText"><span>Goals:</span>
+						<ol>
+							<li>Make the navigation efficient</li>
+							<li>Help students find organizations that they already know they want to join</li>
+							<li>Help students find organizations that they might not know about yet</li>
+							<li>Encourage students to propose new organizations</li>
+						</p>
 					</div>
 				</div>
 			</div>
 
-			<div id="googlePersona">
+			<div id="googlePersona" class="gray">
 				<div class="section">
 					<h3>Personas</h3>
 					<div class="sectionContent">
-						<img src="images/" alt="Persona1" class="">
-						<img src="images/" alt="Persona2" class="">
+						<p class="basicText"><strong>Some students know exactly what they want, while others are just browsing.</strong></p>
+						<div class="sideBySide basicText">
+							<img src="images/googleAssets/anya.png" alt="Persona1" class="basicText" style="height: 100px; width: auto">
+							<div>
+								<p class="basicText"><span>Adventurous Anya:</span></p>
+								<ul>
+									<li>Freshman at RISD</li>
+									<li>Just finished orientation</li>
+									<li>Excited to begin new life as a college student</li>
+									<li>Interested in meeting new people and trying new things</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sideBySide basicText">
+							<img src="images/googleAssets/fay.png" alt="Persona2" class="basicText" style="height: 100px; width: auto">
+							<div>	
+								<p class="basicText"><span>Focused Fay:</span></p>
+								<ul>
+									<li>Freshman at RISD</li>
+									<li>Just finished orientation</li>
+									<li>Loves baking</li>
+									<li>Sad because her dorm room does not have an oven or space for baking</li>
+									<li>Looking to meet other people who are also interested in baking</li>
+								</ul>
+							</div>
+						</div>
+						
 					</div>
 				</div>
 			</div>
 
-			<div id="googleIdeation">
+			<div id="googleIdeation" class="white">
 				<div class="section">
 					<h3>Ideation</h3>
 					<div class="sectionContent">
-						<img src="images/" alt="sticky notes" class="">
-						<img src="images/" alt="sketches" class="">
+						<p class="basicText"><strong>What features should this experience have? How should they be organized?</strong></p>
+						<p class="basicText"><span>Brainstorming:</span> I started by writing down some of the features that I thought the experience should have and how I thought they should be organized based on my research.</p>
+						<img src="images/googleAssets/ideation.jpg" alt="ideation" class="basicText" style="height:400px; width: auto;">
+						<p class="basicText"></p> 
+						<p class="basicText"><span>Sketching:</span> Then I drew some initial wireframes. I prefer to always design for a mobile experience first and then create the desktop experience based on the mobile experience.</p>
+						<img src="images/googleAssets/sketches.png" alt="sketches" class="basicText">
 					</div>
 				</div>
 			</div>
 
+			<div id="googleNavigation" class="gray">
+				<div class="section">
+					<h3>Navigation</h3>
+					<div class="sectionContent">
+						<p class="basicText"><strong>This app is divided into three main sections: explore, groups, and events.</strong></p> 
+						<p class="basicText">I divided it up this way so that students can easily find new groups and events to attend through the explore tab as well as view the groups that they are members of already and events that are already on their calendars. I chose to use a bottom navigation for easy accessibility.</p>
+					</div>
+				</div>
+				<div class="fullImageContainer">
+					<img src="images/googleAssets/nav.png" alt="navigation" class="basicText">
+				</div>
+				<!-- <div class="section">
+					<h3 style="border-top: none;"></h3>
+					<div class="sectionContent">
+						<p class="basicText"><span>Explore:</span> This is the first screen that students see after logging in. They see upcoming events and can browse through different student groups. They can use this tab to discover new events and groups. They can save events to their calendars or share them with friends outside of the app (in text, email, etc).</p>
+						<p class="basicText"><span>Groups:</span> Here students can see the groups that they are members of and the groups that they have leadership roles in. They can also see suggested groups and register a new groups.</p>
+						<p class="basicText"><span>Events:</span> Students can see the events that they saved as well as the events of the clubs that they are members of.</p>
+					</div>
+				</div> -->
+			</div>
 
-			<div id="googleFlow">
+
+			<div id="googleFlow" class="white">
 				<div class="section">
 					<h3>User Flows</h3>
 					<div class="sectionContent">
-						<p class="basicText">Search vs Discovery</p>
-						<img src="images/" alt="sticky notes" class="">
-						<img src="images/" alt="sketches" class="">
+						<p class="basicText"><strong>Search vs Discovery</strong></p>
+						<p class="basicText"><span>Discovery:</span> Adventurous Anya is looking to try new things. She uses the explore tab to browse through upcoming events, and clubs until she finds one that sounds interesting to her.</p>
+						<p class="basicText"><span>Search:</span> Focused Fay knows exactly what she is looking for. She searches for a club using the search function, and when she doesn’t find it, she decides to register her own club.</p>
 					</div>
 				</div>
 			</div>
-
-			<div id="googleInformationArchitecture">
-				<div class="section">
-					<h3>Information Architecture</h3>
-					<div class="sectionContent">
-						<img src="images/" alt="information architecture" class="">
-					</div>
+			<div id="googleFlow" class="gray">
+				<div class="fullImageContainer" style="margin-right: 5%; margin-left: 5%; width: 90%;">
+					<p class="basicText"><strong>Discovery:</strong></p>
+					<img src="images/googleAssets/explore.png" alt="explore" class="basicText" style="max-width: 100%; height: auto;">
+				</div>
+			</div>
+			<div id="googleFlow" class="white">
+				<div class="fullImageContainer" style="margin-right: 5%; margin-left: 5%; width: 90%;">
+					<p class="basicText"><strong>Search:</strong></p>
+					<img src="images/googleAssets/search.png" alt="search" class="basicText" style="max-width: 100%; height: auto;">
 				</div>
 			</div>
 
-			<div id="googleMockups">
+
+			<div id="googleMockups" class="gray">
 				<div class="section">
 					<h3>Mockups</h3>
 					<div class="sectionContent">
-						<img src="images/" alt="mockup" class="">
+					</div>
+				</div>
+				<div class="fullImageContainer">
+					<div class="twoColumns" id="extraTopMargin">
+						<img src="images/googleAssets/mockups2.png" alt="mockup" class="" style="height: 80vh; width: auto;">
+						<p class="basicText">Images are a big part of this interface so that group leaders can communicate what their group is about visually. Images allow groups a small amount of customization for their pages.</p>
+					</div>
+					<div class="twoColumns" id="extraTopMargin">
+						<p class="basicText">I used material design guidelines and designed this app for Android.</p>
+						<img src="images/googleAssets/mockups1.png" alt="mockup" class="" style="height: 80vh; width: auto;">
 					</div>
 				</div>
 			</div>
 
-			<div id="googleNextSteps">
+			<div id="googleNextSteps" class="white">
 				<div class="section">
 					<h3>Next Steps</h3>
 					<div class="sectionContent">
-						<p class="basicText"></p>
-						<p class="basicText"><strong>Thanks for looking!</strong></p>
+						<p class="basicText">The next steps for this project are to get feedback from other designers and from users. The app should also include a way for student leaders to edit pages and create new events. School staff should also have a slightly different interface so that they can approve groups and events. This app should also be designed as a web app in a browser for students who wish to view it on desktop.</p>
+						<p class="basicText">Thanks for looking!</p>
 					</div>
 				</div>
 			</div>
