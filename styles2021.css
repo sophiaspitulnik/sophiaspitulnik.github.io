@@ -59,7 +59,7 @@ h4 {
 	font-family: PierSans;
 	font-weight: bold;
 	font-size: 16px;
-	line-height: 30px;
+	line-height: 32px;
 	transition: 0.2s ease-in-out;
 }
 
@@ -345,6 +345,7 @@ a:hover {
 
 	h4 {
 		font-size: 18px;
+		line-height: 36px;
 	}	
 
 	#landingPageText {
@@ -392,6 +393,7 @@ a:hover {
 
 	h4 {
 		font-size: 12px;
+		line-height: 24px;
 	}
 
 	#landingPageTextContainer {
