@@ -1,0 +1,475 @@
+@font-face {
+    font-family: XeroxSerifNarrow;
+    src: url(XeroxSerifNarrowFC.woff);
+}
+
+@font-face {
+    font-family: XeroxSerifWide;
+    src: url(XeroxSerifWideFC.woff);
+}
+
+@font-face {
+    font-family: PierSans;
+    src: url(hinted-PierSans.woff);
+}
+
+@font-face {
+    font-family: PierSans;
+    src: url(hinted-PierSans-Bold.woff);
+    font-weight: bold;
+}
+
+body, html {
+	font-family: "XeroxSerifNarrow", Times, serif;
+	margin: 0;
+	padding: 0;
+	line-height: 1.4;
+	color: #3A332C;
+	height: 100%;
+	background-color: #3A332C;
+	cursor: url("images2021/clear.png"), none;
+}
+
+h1 {
+	font-size: 65px;
+	line-height: 55px;
+	font-weight: 400;
+	transition: 0.2s ease-in-out;
+}
+
+h2, h3 {
+	font-family: "XeroxSerifWide", Times, serif;
+	font-weight: 400;
+	transition: 0.2s ease-in-out;
+}
+
+h2 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+h3 {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+h4 {
+	padding: 0px;
+	margin: 0px;
+	font-family: PierSans;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 30px;
+	transition: 0.2s ease-in-out;
+}
+
+a {
+	color: #3A332C;
+	cursor: url("images2021/clear.png"), none;
+	transition: 0.2s ease-in-out;
+}
+
+a:hover {
+	color: #87ADE3;
+	cursor: url("images2021/clear.png"), none;
+	transition: 0.2s ease-in-out;
+}
+
+#landingPage {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+#header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: stretch;
+	background-color: white;
+	width: 100%;
+	height: 60px;
+}
+
+.left {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	width: 50%;
+}
+
+.right {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	width: 50%;
+}
+
+.leftContent {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	margin: auto;
+	width: 450px;
+}
+
+.rightContent {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-content: center;
+	align-items: center;
+	margin: auto;
+	width: 450px;
+}
+
+.leftContent h4 {
+	padding-left: 20px;
+}
+
+.rightContent h4 {
+	padding-right: 20px;
+}	
+
+#landingPageContent {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	background-color: #FFF7EC;
+	height: 100%;
+	border-top-style: solid;
+	border-color: #3A332C;
+}
+
+#landingPageTextContainer, #landingPageImages {
+	flex-grow: 1;
+	width: 50%;
+	overflow: hidden;
+}
+
+#backgroundImage {
+	background-image: url("images2021/clouds2.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	opacity: 0.80;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	/*filter: hue-rotate(30deg);
+	filter: sepia(30%);*/
+}
+
+#landingPageText {
+	margin: auto;
+	max-width: 450px;
+}
+
+#landingPageTextContainer {
+	display: flex;
+	align-content: center;
+	border-right-style: solid;
+	border-color: #3A332C;
+}
+
+#circles {
+	display: flex;
+	flex-direction: row;
+}
+
+.circle {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	margin: 5px;
+}
+
+#close {
+	background-color: #E37221;
+}
+
+#minimize {
+	background-color: #EBDF40;
+}
+
+#expand {
+	background-color: #87ADE3;
+}
+
+
+.funImages {
+	position: absolute;
+	overflow: hidden;
+}
+
+#croc {
+	width: 130px;
+	top: 41px;
+	right: 30%;
+	transition: 0.2s ease-in-out;
+}
+
+#croc:hover {
+	filter: hue-rotate(-40deg);
+	transition: 1s ease-in-out;
+}
+
+#sophia {
+	width: 300px;
+    position: absolute;
+    top: -90px;
+    left: -40px;
+}
+
+#imageCircle {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	margin-top: -300px;
+	margin-left: -20px;
+	position: absolute;
+	overflow: hidden;
+	background-image: url("images2021/sophia.jpg");
+	background-position: left;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	transition: background-image 0.3s ease-in-out;
+}
+
+
+#imageCircle:hover {
+	background-image: url("images2021/sophia2.jpg");
+	transition: background-image 0.3s ease;
+}	
+
+#glenda {
+	width: 250px;
+	top: 350px;
+    right: 10%;
+    transition: transform 0.3s ease;
+    transition: width 0.3s ease;
+}
+
+#glenda:hover {
+	transform: rotate(10deg);
+	transition: transform 0.3s ease-in-out;
+}
+
+#cursor {
+	background-image: url("images2021/cursor.png"); 
+	background-position: left;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+	width: 100px;
+	height: 100px;
+	margin-top: -550px;
+	right: 10%;
+}
+
+#cursor:hover {
+	background-image: url("images2021/cursor2.png"); 
+}
+
+#carrot {
+	position: absolute;
+	z-index: -10;
+	width: 50px;
+}
+
+#linkedin {
+	height: 30px;
+	width: 30px;
+	background-image: url("images2021/linkedin.png");
+	background-size: 100%;
+	transition: background-image 0.2s ease-in-out;
+}
+
+#linkedin:hover {
+	height: 30px;
+	width: 30px;
+	background-image: url("images2021/linkedinHover.png");
+	background-size: 100%;
+	transition: background-image 0.2s ease-in-out;
+}
+
+
+@media only screen and (max-width: 1000px) {
+	h1 {
+		font-size: 55px;
+		line-height: 50px;
+		transition: 0.2s ease-in-out;
+	}
+
+	h2 {
+		font-size: 20px;
+		line-height: 26px;
+		transition: 0.2s ease-in-out;
+	}
+
+	h3 {
+		font-size: 16px;
+		line-height: 20px;
+		transition: 0.2s ease-in-out;
+	}
+
+	#landingPageText {
+		margin: auto;
+		max-width: 350px;
+	}
+
+	.leftContent, .rightContent {
+		max-width: 350px;
+	}
+
+	#glenda {
+		width: 150px;
+		transition: width 0.3s ease;
+	}	
+
+}
+
+
+@media only screen and (max-width: 800px) {
+	h1 {
+		font-size: 45px;
+		line-height: 40px;
+		transition: 0.2s ease-in-out;
+	}
+
+	h2, h3 {
+		font-size: 18px;
+		line-height: 24px;
+		transition: 0.2s ease-in-out;
+	}
+
+	h4 {
+		font-size: 18px;
+	}	
+
+	#landingPageText {
+		margin: auto;
+		max-width: 300px;
+	}
+
+	.leftContent, .rightContent {
+		max-width: 300px;
+	}
+
+	#imageCircle {
+		width: 100px;
+		height: 100px;
+	}
+
+	#sophia {
+		width: 250px;
+	    position: absolute;
+	    top: -90px;
+	    left: -40px;
+	}	
+
+	.circle {
+		display: none;
+	}
+
+	.leftContent h4 {
+		padding: 0px;
+	}
+
+}	
+
+
+@media only screen and (max-width: 650px) {
+	h1 {
+		text-align: center;
+	}
+
+	h2, h3 {
+		font-size: 16px;
+		line-height: 22px;
+		transition: 0.2s ease-in-out;
+	}
+
+	h4 {
+		font-size: 12px;
+	}
+
+	#landingPageTextContainer {
+		width: 100%;
+		border-right-style: none;
+	}
+
+	#backgroundImage {
+		display: none;
+	}
+
+	#landingPageImages {
+		width: 0px;
+	}
+
+	#header {
+		background-image: url("images2021/clouds2.gif");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.leftContent {
+		max-width: 150px;
+	}
+
+	.rightContent {
+		max-width: 150px;
+	}
+
+	.Resume {
+		display: none;
+	}
+
+	#carrot {
+		display: none;
+	}
+
+	#glenda {
+		width: 130px;
+		top: 90%;
+    	right: 2%;
+    	transition: width 0.3s ease;
+    	transition:  0.3s ease;
+    }
+
+	#croc {
+		width: 100px;
+		top: 20px;
+		right: 20%;
+	}
+
+	#cursor {
+		margin-top: 230px;
+		width: 80px;
+		height: 80px;
+		right: 5%;
+	}
+
+	#imageCircle {
+		width: 60px;
+		height: 60px;
+		margin-top: 20px;
+		margin-left: -95%;
+		position: absolute;
+		z-index: 1000;
+	}	
+}
+
+@media only screen and (max-width: 310px) {
+	#landingPageText {
+		max-width: 270px;
+	}
+
+	.leftContent {
+		max-width: 135px;
+	}
+
+	.rightContent {
+		max-width: 135px;
+	}	
+}	
