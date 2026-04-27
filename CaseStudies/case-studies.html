@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sophia Spitulnik — Product Design Case Studies</title>
+<style>
+
+/* ── Reset ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+
+:root{
+  --dark:#252525;
+  --green:#6aaa8c;
+  --bg:#eeecea;
+  --white:#ffffff;
+  --muted:rgba(37,37,37,0.45);
+  --card-shadow:0 1px 4px rgba(0,0,0,0.06),0 6px 24px rgba(0,0,0,0.09),0 16px 48px rgba(0,0,0,0.05);
+  --card-shadow-hover:0 2px 8px rgba(0,0,0,0.1),0 12px 40px rgba(0,0,0,0.14),0 28px 64px rgba(0,0,0,0.08);
+  --radius:10px;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+  --nav-h:58px;
+  --max-w:1200px;
+  --pad:56px;
+}
+
+body{
+  background:var(--bg);
+  color:var(--dark);
+  font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',Arial,sans-serif;
+  overflow-x:hidden;
+}
+
+/* ── Nav ── */
+.nav{
+  position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:500;
+  display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);
+  background:rgba(18,18,18,0.92);
+  backdrop-filter:blur(28px) saturate(160%);-webkit-backdrop-filter:blur(28px) saturate(160%);
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+.nav-name{color:#fff;font-size:14px;font-weight:700;letter-spacing:-0.02em;text-decoration:none;transition:opacity .2s}
+.nav-name:hover{opacity:.7}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-link{
+  display:flex;align-items:center;gap:5px;padding:5px 13px;border-radius:100px;
+  color:rgba(255,255,255,0.48);font-size:12px;font-weight:600;letter-spacing:.01em;
+  text-decoration:none;white-space:nowrap;
+  transition:color .2s,background .2s;
+}
+.nav-link:hover{color:rgba(255,255,255,.88);background:rgba(255,255,255,.07)}
+.nav-link.active{color:#fff;background:rgba(106,170,140,.22)}
+.nav-num{font-size:10px;color:var(--green);opacity:0;transition:opacity .25s}
+.nav-link.active .nav-num{opacity:1}
+
+/* ── Progress ── */
+.progress{position:fixed;top:var(--nav-h);left:0;height:2px;background:linear-gradient(90deg,var(--green),#9ecdb5);z-index:499;width:0;transition:width .08s linear}
+
+/* ── Hero ── */
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  background:var(--dark);padding:calc(var(--nav-h) + 60px) var(--pad) 72px;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:-30%;pointer-events:none;
+  background:radial-gradient(ellipse at 55% 35%,rgba(106,170,140,.14) 0%,transparent 60%);
+}
+.hero-img{
+  width:100%;max-width:980px;display:block;border-radius:var(--radius);
+  box-shadow:0 24px 96px rgba(0,0,0,.55),0 4px 20px rgba(0,0,0,.4);
+  opacity:0;transform:translateY(28px) scale(.98);transition:opacity 1s var(--ease),transform 1s var(--ease);
+}
+.hero-img.loaded{opacity:1;transform:none}
+.scroll-cue{
+  position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  opacity:0;animation:fadeUp 1s var(--ease) 1.5s forwards;
+}
+.scroll-cue span{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+.scroll-line{width:1px;height:36px;background:linear-gradient(180deg,rgba(106,170,140,.7),transparent);animation:linePulse 2.2s ease-in-out infinite}
+@keyframes fadeUp{from{opacity:0;transform:translateX(-50%) translateY(10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+@keyframes linePulse{0%,100%{opacity:.4}50%{opacity:1}}
+
+/* ── Company band ── */
+.company-band{display:flex;align-items:center;justify-content:center;padding:72px var(--pad);background:var(--white);border-bottom:1px solid rgba(0,0,0,.06)}
+.company-band img{max-width:500px;width:100%;display:block}
+
+/* ── Overview ── */
+.overview{padding:48px var(--pad);max-width:var(--max-w);margin:0 auto}
+.overview-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.overview-title{font-size:38px;font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-bottom:44px}
+.overview-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.overview-card{
+  display:flex;flex-direction:column;gap:10px;padding:24px 20px;
+  background:var(--white);border-radius:var(--radius);border:1px solid rgba(0,0,0,.07);
+  text-decoration:none;color:var(--dark);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;
+}
+.overview-card:hover{transform:translateY(-4px);box-shadow:var(--card-shadow-hover);border-color:rgba(106,170,140,.3)}
+.overview-card-num{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--green)}
+.overview-card-title{font-size:14px;font-weight:700;letter-spacing:-.015em;line-height:1.35}
+.overview-card-co{font-size:12px;color:var(--muted);margin-top:auto;padding-top:8px}
+
+/* ── Case study section ── */
+.cs-section{padding-bottom:100px}
+
+/* ── Slides feed ── */
+.feed{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad)}
+
+/* ── Individual slide ── */
+.slide{
+  margin-bottom:14px;
+  opacity:0;transform:translateY(24px);
+  transition:opacity .7s var(--ease),transform .7s var(--ease);
+}
+.slide.in{opacity:1;transform:none}
+
+.slide-card{border-radius:var(--radius);overflow:hidden;box-shadow:var(--card-shadow);background:var(--white);transition:box-shadow .3s}
+.slide-card:hover{box-shadow:var(--card-shadow-hover)}
+.slide-card img{width:100%;display:block;vertical-align:bottom}
+.slide-card video{width:100%;display:block;vertical-align:bottom}
+
+/* Full-bleed (dark/green section headers) */
+.slide.bleed{margin-left:calc(-1 * var(--pad));margin-right:calc(-1 * var(--pad));margin-bottom:0;width:calc(100% + var(--pad)*2)}
+.slide.bleed .slide-card{box-shadow:none}
+.slide.bleed + .slide:not(.bleed){margin-top:14px}
+
+/* ── Phone video slide card ── */
+.slide-card.vid-phones{
+  background:#0d0d0d;
+  display:flex;justify-content:center;align-items:center;
+  gap:20px;padding:48px 40px;
+}
+.slide-card.vid-phones video{
+  height:480px;max-height:55vh;width:auto;
+  display:block;border-radius:14px;
+  box-shadow:0 12px 48px rgba(0,0,0,.6);
+}
+
+/* ── Reveal for non-slide elements ── */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ── Footer ── */
+.site-footer{background:var(--dark);padding:48px var(--pad);display:flex;align-items:center;justify-content:space-between}
+.footer-name{color:rgba(255,255,255,.9);font-size:14px;font-weight:700;letter-spacing:-.01em}
+.footer-role{color:rgba(255,255,255,.38);font-size:13px;margin-top:4px}
+.footer-year{color:rgba(255,255,255,.22);font-size:12px}
+
+/* ── Responsive ── */
+@media(max-width:1024px){
+  :root{--pad:36px}
+  .overview-cards{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  :root{--pad:24px}
+  .nav{padding:0 20px}
+  .nav-links{gap:2px}
+  .nav-link{padding:4px 10px;font-size:11px}
+  .overview-title{font-size:28px}
+  .slide-card.vid-phones{flex-direction:column;padding:32px 24px}
+  .slide-card.vid-phones video{height:auto;width:min(280px,100%);max-height:unset}
+  .site-footer{flex-direction:column;gap:16px;text-align:center}
+}
+@media(max-width:520px){
+  .nav-link{display:none}
+  .nav-link:nth-child(-n+2){display:flex}
+  .overview-cards{grid-template-columns:1fr 1fr}
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav" id="main-nav">
+  <a href="#cover" class="nav-name">Sophia Spitulnik</a>
+  <div class="nav-links">
+    <a href="#cs1" class="nav-link" data-target="cs1">Performance Insights</a>
+    <a href="#cs2" class="nav-link" data-target="cs2">Homeowner Retention</a>
+    <a href="#cs3" class="nav-link" data-target="cs3">Matchmaking</a>
+  </div>
+</nav>
+
+<div class="progress" id="prog"></div>
+
+<!-- ── Cover ── -->
+<section id="cover" class="hero">
+  <img class="hero-img" src="slides/keynote_slides.001.png" alt="Case Study Presentation — Sophia Spitulnik">
+  <div class="scroll-cue"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- ── Overview ── -->
+<div class="overview">
+  <div class="overview-cards">
+    <a href="#cs1" class="overview-card reveal"><div class="overview-card-num">01</div><div class="overview-card-title">Performance Insights</div></a>
+    <a href="#cs2" class="overview-card reveal"><div class="overview-card-num">02</div><div class="overview-card-title">Homeowner Retention</div></a>
+    <a href="#cs3" class="overview-card reveal"><div class="overview-card-num">03</div><div class="overview-card-title">Matchmaking</div></a>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     CS 1 — PERFORMANCE INSIGHTS
+════════════════════════════════════ -->
+<section id="cs1" class="cs-section">
+<div class="feed">
+
+  <div class="slide"><div class="slide-card"><video src="videos/PerformanceInsightsGraphAnimation.mov" muted loop playsinline preload="none" data-av></video></div></div>
+
+  <!-- Background (dark) -->
+  <div class="slide bleed"><div class="slide-card"><img src="slides/keynote_slides.086.png" loading="lazy" alt="Background"></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.087.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.088.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.089.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.090.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.091.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.092.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.093.png" loading="lazy" alt=""></div></div>
+
+  <!-- Problem & hypothesis (dark) -->
+  <div class="slide bleed"><div class="slide-card"><img src="slides/keynote_slides.094.png" loading="lazy" alt="The problem & hypothesis"></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.095.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.096.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.097.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.098.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.099.png" loading="lazy" alt=""></div></div>
+
+  <!-- Performance beta launch (dark) -->
+  <div class="slide bleed"><div class="slide-card"><img src="slides/keynote_slides.100.png" loading="lazy" alt="Performance and insights tracking beta launch"></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.101.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.102.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><video src="videos/PerformanceInsightsDataAnimation2.mov" muted loop playsinline preload="none" data-av></video></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.104.png" loading="lazy" alt=""></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.105.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.106.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><video src="videos/PerformanceInsightsMapAnimation.mov" muted loop playsinline preload="none" data-av></video></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.108.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.109.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.110.png" loading="lazy" alt=""></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.111.png" loading="lazy" alt=""></div></div>
+
+  <!-- "It's not prioritization unless it hurts" (dark) -->
+
+
+  <!-- Beta results (dark) -->
+  <div class="slide bleed"><div class="slide-card"><img src="slides/keynote_slides.115.png" loading="lazy" alt="Beta results"></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.116.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.117.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.118.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.119.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.120.png" loading="lazy" alt=""></div></div>
+
+  <!-- Feedback themes (dark) -->
+  <div class="slide bleed"><div class="slide-card"><img src="slides/keynote_slides.121.png" loading="lazy" alt="Feedback themes"></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.122.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.123.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.124.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.125.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.126.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.127.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.128.png" loading="lazy" alt=""></div></div>
+
+  <!-- Final dark slide -->
+
+</div>
+</section>
+
+<!-- ════════════════════════════════════
+     CS 2 — HOMEOWNER RETENTION
+════════════════════════════════════ -->
+<section id="cs2" class="cs-section">
+<div class="feed">
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.003.png" loading="lazy" alt="Homeowner Retention @ Thumbtack"></div></div>
+
+  <!-- Background (dark) -->
+  <div class="slide bleed"><div class="slide-card"><img src="slides/keynote_slides.004.png" loading="lazy" alt="Background"></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.005.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.006.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.008.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.009.png" loading="lazy" alt=""></div></div>
+
+  <!-- Working towards the vision (dark) -->
+  <div class="slide bleed"><div class="slide-card"><img src="slides/keynote_slides.010.png" loading="lazy" alt="Working towards the vision"></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.011.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.012.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.013.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.014.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.015.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.017.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.019.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.020.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.021.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.022.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.023.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.024.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.025.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.026.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.029.png" loading="lazy" alt=""></div></div>
+
+  <div class="slide"><div class="slide-card"><video src="videos/homeCareAnimation.mov" muted loop playsinline preload="none" data-av></video></div></div>
+  <div class="slide"><div class="slide-card"><video src="videos/PersonalizationsAnimation.mov" muted loop playsinline preload="none" data-av></video></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.032.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.035.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.036.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.037.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.038.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.039.png" loading="lazy" alt=""></div></div>
+
+  <!-- Visioning beyond MVP (dark) -->
+  <div class="slide bleed"><div class="slide-card"><img src="slides/keynote_slides.040.png" loading="lazy" alt="Visioning beyond MVP launch"></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.043.png" loading="lazy" alt=""></div></div>
+
+  <!-- App positioning & mentorship (dark) -->
+  <div class="slide bleed"><div class="slide-card"><img src="slides/keynote_slides.044.png" loading="lazy" alt="App positioning & mentorship"></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.045.png" loading="lazy" alt=""></div></div>
+
+  <!-- Q&A (dark) -->
+
+</div>
+</section>
+
+<!-- ════════════════════════════════════
+     CS 3 — MATCHMAKING
+════════════════════════════════════ -->
+<section id="cs3" class="cs-section">
+<div class="feed">
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.130.png" loading="lazy" alt="Matchmaking @ Thumbtack"></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.131.png" loading="lazy" alt=""></div></div>
+
+  <!-- Green: Exploring the opportunity space -->
+
+
+  <!-- Green: The problem & opportunity -->
+  <div class="slide bleed"><div class="slide-card"><img src="slides/keynote_slides.135.png" loading="lazy" alt="The problem & opportunity"></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.136.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.139.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.140.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.141.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.143.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.148c.png" loading="lazy" alt=""></div></div>
+
+  <!-- Green: "if you want to go far, go together" -->
+  <div class="slide bleed"><div class="slide-card"><img src="slides/keynote_slides.145.png" loading="lazy" alt=""if you want to go far, go together""></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.146.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.148.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.152.png" loading="lazy" alt=""></div></div>
+
+  <!-- Green: section header -->
+  <div class="slide bleed"><div class="slide-card"><img src="slides/keynote_slides.155.png" loading="lazy" alt=""></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.151.png" loading="lazy" alt=""></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.157.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><video src="videos/MatchmakingABtest1.mov" muted loop playsinline preload="none" data-av></video></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.160.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><video src="videos/MatchmakingABTest2.mov" muted loop playsinline preload="none" data-av></video></div></div>
+
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.163.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><video src="videos/MatchmakingABTest3.mov" muted loop playsinline preload="none" data-av></video></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.166.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.167.png" loading="lazy" alt=""></div></div>
+  <div class="slide"><div class="slide-card"><img src="slides/keynote_slides.168.png" loading="lazy" alt=""></div></div>
+
+  <!-- Green: section header -->
+
+
+  <!-- Dark: section header -->
+
+
+
+</div>
+</section>
+
+<!-- ── Closing ── -->
+<div style="width:100%;overflow:hidden">
+  <img src="slides/keynote_slides.173.png" alt="Thank you!" style="width:100%;display:block;vertical-align:bottom">
+</div>
+
+<!-- ── Footer ── -->
+<footer class="site-footer">
+  <div>
+    <div class="footer-name">Sophia Spitulnik</div>
+    <div class="footer-role">Senior Product Designer</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+
+/* ── Hero image entrance ── */
+const heroImg = document.querySelector('.hero-img');
+if(heroImg.complete) heroImg.classList.add('loaded');
+else heroImg.addEventListener('load', () => heroImg.classList.add('loaded'));
+
+/* ── Scroll reveal ── */
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(!e.isIntersecting) return;
+    const el = e.target;
+    const delay = parseFloat(el.dataset.d || 0);
+    setTimeout(() => el.classList.add('in'), delay * 1000);
+    revealObs.unobserve(el);
+  });
+}, { threshold: 0.05, rootMargin: '0px 0px -24px 0px' });
+
+document.querySelectorAll('.feed').forEach(feed => {
+  const els = Array.from(feed.children);
+  let slideIdx = 0;
+  els.forEach(el => {
+    if(el.classList.contains('bleed')) {
+      el.dataset.d = '0';
+    } else {
+      el.dataset.d = Math.min(slideIdx * 0.028, 0.2).toFixed(3);
+      slideIdx++;
+    }
+    revealObs.observe(el);
+  });
+});
+
+document.querySelectorAll('.reveal, .overview-card').forEach(el => revealObs.observe(el));
+
+/* ── Video autoplay ── */
+const vidObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    e.target.querySelectorAll('video[data-av]').forEach(v => {
+      if(e.isIntersecting) v.play().catch(()=>{});
+      else v.pause();
+    });
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.slide').forEach(el => {
+  if(el.querySelector('video[data-av]')) vidObs.observe(el);
+});
+
+/* ── Progress + active nav ── */
+const prog = document.getElementById('prog');
+const navLinks = document.querySelectorAll('.nav-link[data-target]');
+const sections = ['cs1','cs2','cs3'].map(id => document.getElementById(id)).filter(Boolean);
+let rafPending = false;
+
+window.addEventListener('scroll', () => {
+  if(rafPending) return;
+  rafPending = true;
+  requestAnimationFrame(() => {
+    const scrolled = window.scrollY;
+    const total = document.body.scrollHeight - window.innerHeight;
+    prog.style.width = (total > 0 ? scrolled / total * 100 : 0) + '%';
+
+    let active = null;
+    sections.forEach(s => { if(s.getBoundingClientRect().top <= 100) active = s.id; });
+    navLinks.forEach(a => a.classList.toggle('active', a.dataset.target === active));
+    rafPending = false;
+  });
+}, { passive: true });
+
+/* ── Smooth scroll with nav offset ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if(!t) return;
+    e.preventDefault();
+    window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 72, behavior: 'smooth' });
+  });
+});
+
+})();
+</script>
+</body>
+</html>
